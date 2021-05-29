@@ -33,7 +33,7 @@ a {
 
 .buttons a:hover {
   background-color: rgba(0, 0, 0, 0.3);
-  color: transparent;
+  color: #FFF;
   transition: 0.2s;
   padding: 1rem;
   border-radius: 1rem;
