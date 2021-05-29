@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <title>Hitta Oss</title>
+</head>
+
+<body>
+  <header>
+    <div class="topnav">
+      <nav class="buttons">
+        <a href="index.html">
+          <img src="hotelpic.jpg" alt="Lorem Ipsum Hotel Logo">
+        </a>
+
+        <p id="logotext">Hotell Lorem Ipsum</p>
+        <div id="myLinks">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="boka.html">Boka</a></li>
+            <li><a href="hitta.html">Hitta</a></li>
+            <li><a href="kontakta.html">Kontakta</a></li>
+          </ul>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+    </div>
+
+  </header>
+  <!-- mainsite content -->
+  <div class="mainsite">
+    <!-- content for the mainsite -->
+    <div class="mainsite-content">
+      <h1 class="mainsite-title">Hitta Oss</h1>
+      <iframe class="find-us-map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1593.9029270818194!2d13.009549898143437!3d55.599940200105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7ce10f4d52a8394f!2sPauliskolan!5e0!3m2!1sen!2sse!4v1621615295541!5m2!1sen!2sse" allowfullscreen="" loading="eager"></iframe>
+      <section class="find-us-text">Beskrivning av läge: Pie muffin carrot cake apple pie gummies chocolate danish. Gingerbread toffee I love macaroon candy canes. Gingerbread I love sweet roll jelly chocolate bar croissant. Lollipop I love croissant
+        marshmallow jujubes
+        tiramisu jujubes halvah soufflé.<br><br>
+
+        Chocolate jujubes gummi bears muffin I love I love wafer. Jelly dragée pastry oat cake chocolate cheesecake fruitcake marshmallow. I love apple pie biscuit.</section>
+    </div>
+  </div>
+  <!-- Provade att använda %7C för |-tecken men detta fungerade inte? Använde därför tecknet för sig själv -->
+  <footer>Gjord av Viktor Hvarvenius | Adress: <a id="adresslink"
+      href="https://www.google.com/maps/place/The+White+House/@38.8976805,-77.0387185,17z/data=!3m1!5s0x89b7b7bce16040c9:0xb825fcec8d0b4d30!4m12!1m6!3m5!1s0x89b7b7bcdecbb1df:0x715969d86d0b76bf!2sThe+White+House!8m2!3d38.8976763!4d-77.0365298!3m4!1s0x89b7b7bcdecbb1df:0x715969d86d0b76bf!8m2!3d38.8976763!4d-77.0365298" target="_blank">Hotell
+      Lorem Ipsum | Storgatan 1 | 123 45 Storstad</a> | 012 - 12 34 56</footer>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
