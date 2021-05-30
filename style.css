@@ -125,6 +125,18 @@ section {
   border: 0;
 }
 
+#kontaktmail {
+  text-decoration: underline;
+  color: #6fc276;
+}
+
+#kontaktmail:hover {
+  text-decoration: underline;
+  color: #1E5631;
+  background-color: transparent;
+  transition: 0.2s;
+}
+
 @media screen and (max-width: 1330px) {
   footer {
     float: right!important;
