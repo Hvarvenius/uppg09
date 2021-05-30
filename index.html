@@ -3,35 +3,20 @@
 
 <head>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta charset="utf-8">
   <title>Hotell Multinationell</title>
 </head>
 
 <body>
-  <header>
-    <div class="topnav">
-      <nav class="buttons">
-        <a href="index.html">
-          <img src="hotelpic.jpg" alt="Lorem Ipsum Hotel Logo">
-        </a>
-
-        <p id="logotext">Hotell Lorem Ipsum</p>
-        <div id="myLinks">
-          <ul>
-            <li><a href="index.html">Start</a></li>
-            <li><a href="boka.html">Boka</a></li>
-            <li><a href="hitta.html">Hitta</a></li>
-            <li><a href="kontakta.html">Kontakta</a></li>
-          </ul>
-        </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </nav>
-    </div>
-
-  </header>
+  <nav class="topnav" id="myTopnav">
+    <img src="hotelpic.jpg" alt="Our Logo" class="begone">
+    <p id="logotext" class="begone">Hotell Lorem Ipsum</p>
+    <a href="index.html" class="active hoverr">Start</a>
+    <a href="boka.html" class="hoverr">Boka</a>
+    <a href="hitta.html" class="hoverr">Hitta</a>
+    <a href="kontakta.html" class="hoverr">Kontakta</a>
+    <a href="javascript:void(0);" style="font-size:20px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </nav>
   <!-- mainsite content -->
   <div class="mainsite">
     <!-- content for the mainsite -->
@@ -77,49 +62,45 @@
   </div>
   <!-- Provade att använda %7C för |-tecken men detta fungerade inte? Använde därför tecknet för sig själv -->
   <footer>Gjord av Viktor Hvarvenius | Adress: <a id="adresslink"
-      href="https://www.google.com/maps/place/The+White+House/@38.8976805,-77.0387185,17z/data=!3m1!5s0x89b7b7bce16040c9:0xb825fcec8d0b4d30!4m12!1m6!3m5!1s0x89b7b7bcdecbb1df:0x715969d86d0b76bf!2sThe+White+House!8m2!3d38.8976763!4d-77.0365298!3m4!1s0x89b7b7bcdecbb1df:0x715969d86d0b76bf!8m2!3d38.8976763!4d-77.0365298" target="_blank">Hotell
+      href="https://www.google.com/maps/place/The+White+House/@38.8976805,-77.0387185,17z/data=!3m1!5s0x89b7b7bce16040c9:0xb825fcec8d0b4d30!4m12!1m6!3m5!1s0x89b7b7bcdecbb1df:0x715969d86d0b76bf!2sThe+White+House!8m2!3d38.8976763!4d-77.0365298!3m4!1s0x89b7b7bcdecbb1df:0x715969d86d0b76bf!8m2!3d38.8976763!4d-77.0365298"
+      target="_blank">Hotell
       Lorem Ipsum | Storgatan 1 | 123 45 Storstad</a> | 012 - 12 34 56</footer>
 
+  <script src="node.js"></script>
+
   <script>
-    function myFunction() {
-      var x = document.getElementById("myLinks");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
       }
-    }
-  </script>
-
-  <script>
-  var slideIndex = 1;
-  showSlides(slideIndex);
-
-  // Next/previous controls
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  // Thumbnail image controls
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
+      }
+      for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-  }
   </script>
 
 </body>
