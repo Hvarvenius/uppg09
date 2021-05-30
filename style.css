@@ -23,6 +23,10 @@ header .buttons {
   z-index: 1;
 }
 
+h2 {
+  color: #FFF;
+}
+
 a {
   color: #FFF;
   background-color: transparent;
@@ -127,12 +131,12 @@ section {
 
 #kontaktmail {
   text-decoration: underline;
-  color: #6fc276;
+  color: #6fc276!important;
 }
 
 #kontaktmail:hover {
   text-decoration: underline;
-  color: #1E5631;
+  color: #1E5631!important;
   background-color: transparent;
   transition: 0.2s;
 }
